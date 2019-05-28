@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E3000000"
+    tools:context=".MainActivity">
+
+    <HorizontalScrollView
+        android:id="@+id/svInput"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/inputView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:backgroundTint="#00FFFFFF"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:maxLines="1"
+                android:overScrollMode="ifContentScrolls"
+                android:scrollHorizontally="true"
+                android:textColor="#C6C6C6"
+                android:textSize="30sp" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="188dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/dotButton"
+        android:layout_width="82dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="16dp"
+
+        android:background="@drawable/ripple_effect"
+        android:hapticFeedbackEnabled="false"
+        android:text="@string/dot"
+        android:textColor="#C1C1C1"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/number0Button"
+        app:layout_constraintStart_toEndOf="@+id/number0Button" />
+
+    <Button
+        android:id="@+id/divideButton"
+        android:layout_width="82dp"
+        android:layout_height="65dp"
+
+        android:layout_marginStart="16dp"
+        android:background="@drawable/ripple_effect"
+        android:hapticFeedbackEnabled="false"
+        android:text="@string/slash"
+        android:textColor="#C1C1C1"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/dotButton"
+        app:layout_constraintStart_toEndOf="@+id/dotButton" />
+
+    <Button
+        android:id="@+id/openParButton"
+        android:layout_width="82dp"
+        android:layout_height="65dp"
+
+        android:layout_marginTop="32dp"
+        android:background="@drawable/ripple_effect"
+        android:hapticFeedbackEnabled="false"
+        android:text="("
+        android:textColor="#C1C1C1"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/delButton"
+        app:layout_constraintTop_toBottomOf="@+id/delButton" />
+
+    <Button
+        android:id="@+id/sinButton"
+        android:layout_width="82dp"
+        android:layout_height="65dp"
+
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ripple_effect"
+        android:hapticFeedbackEnabled="false"
+        android:text="@string/sin"
+        android:textColor="#C1C1C1"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/openParButton"
+        app:layout_constraintTop_toBottomOf="@+id/openParButton" />
+
+    <Button
+        android:id="@+id/sqrtButton"
+        android:layout_width="82dp"
+        android:layout_height="65dp"
+
+        android:layout_marginStart="16dp"
+        android:background="@drawable/ripple_effect"
+        android:hapticFeedbackEnabled="false"
+        android:text="sqrt"
+        android:textColor="#C1C1C1"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/logButton"
+        app:layout_constraintStart_toEndOf="@+id/logButton" />
+
+    <Button
+        android:id="@+id/logButton"
+        android:layout_width="82dp"
+        android:layout_height="65dp"
+
+        android:layout_marginStart="16dp"
+        android:background="@drawable/ripple_effect"
+        android:hapticFeedbackEnabled="false"
+        android:text="log"
+        android:textColor="#C1C1C1"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cosButton"
+        app:layout_constraintStart_toEndOf="@+id/cosButton" />
+
+    <Button
+        android:id="@+id/cosButton"
+        android:layout_width="82dp"
+        android:layout_height="65dp"
+
+        android:layout_marginStart="16dp"
+        android:background="@drawable/ripple_effect"
+        android:hapticFeedbackEnabled="false"
+        android:text="cos"
+        android:textColor="#C1C1C1"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/sinButton"
+        app:layout_constraintStart_toEndOf="@+id/sinButton" />
+
+    <Button
+        android:id="@+id/equalButton"
+        android:layout_width="82dp"
+        android:layout_height="65dp"
+
+        android:layout_marginStart="16dp"
+        android:background="@drawable/ripple_effect"
+        android:backgroundTint="#00FFFFFF"
+        android:hapticFeedbackEnabled="false"
+        android:text="="
+        android:textColor="#C1C1C1"
+        android:textSize="46sp"
+        app:layout_constraintBottom_toBottomOf="@+id/powButton"
+        app:layout_constraintStart_toEndOf="@+id/powButton" />
+
+    <Button
+        android:id="@+id/powButton"
+        android:layout_width="82dp"
+        android:layout_height="65dp"
+
+        android:layout_marginStart="16dp"
+        android:background="@drawable/ripple_effect"
+        android:backgroundTint="#00FFFFFF"
+        android:hapticFeedbackEnabled="false"
+        android:text="^"
+        android:textColor="#C1C1C1"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="@+id/closedParButton"
+        app:layout_constraintStart_toEndOf="@+id/closedParButton" />
+
+    <Button
+        android:id="@+id/closedParButton"
+        android:layout_width="82dp"
+        android:layout_height="65dp"
+
+        android:layout_marginStart="16dp"
+        android:background="@drawable/ripple_effect"
+        android:hapticFeedbackEnabled="false"
+        android:text=")"
+        android:textColor="#C1C1C1"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/openParButton"
+        app:layout_constraintStart_toEndOf="@+id/openParButton" />
+
+    <Button
+        android:id="@+id/number8Button"
+        android:layout_width="82dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/ripple_effect"
+
+        android:hapticFeedbackEnabled="false"
+        android:text="8"
+        android:textColor="#C1C1C1"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/number7Button"
+        app:layout_constraintStart_toEndOf="@+id/number7Button" />
+
+    <Button
+        android:id="@+id/number0Button"
+        android:layout_width="82dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/ripple_effect"
+
+        android:hapticFeedbackEnabled="false"
+        android:text="0"
+        android:textColor="#C1C1C1"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/delButton"
+        app:layout_constraintStart_toEndOf="@+id/delButton" />
+
+    <Button
+        android:id="@+id/delButton"
+        android:layout_width="82dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ripple_effect"
+
+        android:hapticFeedbackEnabled="false"
+        android:text="DEL"
+        android:textColor="#C1C1C1"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/number3Button"
+        app:layout_constraintTop_toBottomOf="@+id/number3Button" />
+
+    <Button
+        android:id="@+id/multiplyButton"
+        android:layout_width="82dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="16dp"
+
+        android:background="@drawable/ripple_effect"
+        android:hapticFeedbackEnabled="false"
+        android:text="*"
+        android:textColor="#C1C1C1"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/number1Button"
+        app:layout_constraintStart_toEndOf="@+id/number1Button" />
+
+    <Button
+        android:id="@+id/number1Button"
+        android:layout_width="82dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/ripple_effect"
+
+        android:hapticFeedbackEnabled="false"
+        android:text="1"
+        android:textColor="#C1C1C1"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/number2Button"
+        app:layout_constraintStart_toEndOf="@+id/number2Button" />
+
+    <Button
+        android:id="@+id/number2Button"
+        android:layout_width="82dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/ripple_effect"
+
+        android:hapticFeedbackEnabled="false"
+        android:text="2"
+        android:textColor="#C1C1C1"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/number3Button"
+        app:layout_constraintStart_toEndOf="@+id/number3Button" />
+
+    <Button
+        android:id="@+id/number3Button"
+        android:layout_width="82dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ripple_effect"
+
+        android:hapticFeedbackEnabled="false"
+        android:text="3"
+        android:textColor="#C1C1C1"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/number4Button"
+        app:layout_constraintTop_toBottomOf="@+id/number4Button" />
+
+    <Button
+        android:id="@+id/minusButton"
+        android:layout_width="82dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="16dp"
+
+        android:background="@drawable/ripple_effect"
+        android:hapticFeedbackEnabled="false"
+        android:text="-"
+        android:textColor="#C1C1C1"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/number6Button"
+        app:layout_constraintStart_toEndOf="@+id/number6Button" />
+
+    <Button
+        android:id="@+id/number6Button"
+        android:layout_width="82dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/ripple_effect"
+
+        android:hapticFeedbackEnabled="false"
+        android:text="6"
+        android:textColor="#C1C1C1"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/number5Button"
+        app:layout_constraintStart_toEndOf="@+id/number5Button" />
+
+    <Button
+        android:id="@+id/number5Button"
+        android:layout_width="82dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/ripple_effect"
+
+        android:hapticFeedbackEnabled="false"
+        android:text="5"
+        android:textColor="#C1C1C1"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/number4Button"
+        app:layout_constraintStart_toEndOf="@+id/number4Button" />
+
+    <Button
+        android:id="@+id/number9Button"
+        android:layout_width="82dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/ripple_effect"
+
+        android:hapticFeedbackEnabled="false"
+        android:text="9"
+        android:textColor="#C1C1C1"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/number8Button"
+        app:layout_constraintStart_toEndOf="@+id/number8Button" />
+
+    <Button
+        android:id="@+id/plusButton"
+        android:layout_width="82dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="16dp"
+
+        android:background="@drawable/ripple_effect"
+        android:hapticFeedbackEnabled="false"
+        android:text="+"
+        android:textColor="#C1C1C1"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/number9Button"
+        app:layout_constraintStart_toEndOf="@+id/number9Button" />
+
+    <Button
+        android:id="@+id/number4Button"
+        android:layout_width="82dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ripple_effect"
+
+        android:hapticFeedbackEnabled="false"
+        android:text="4"
+        android:textColor="#C1C1C1"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/number7Button"
+        app:layout_constraintTop_toBottomOf="@+id/number7Button" />
+
+    <Button
+        android:id="@+id/number7Button"
+        android:layout_width="82dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/ripple_effect"
+
+        android:hapticFeedbackEnabled="false"
+        android:text="@string/_7"
+        android:textColor="#C1C1C1"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <HorizontalScrollView
+        android:id="@+id/svOutput"
+        android:layout_width="381dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/svInput"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/svInput"
+        app:layout_constraintTop_toBottomOf="@+id/svInput">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/resultView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:backgroundTint="#00FFFFFF"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:maxLines="1"
+                android:overScrollMode="ifContentScrolls"
+                android:scrollHorizontally="true"
+                android:textColor="#C6C6C6"
+                android:textSize="52sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</android.support.constraint.ConstraintLayout>

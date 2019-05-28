@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="_7">7</string>
+    <string name="sotto_la_panca_la_capra_campa_sopra_la_panca_carmine_merda">sotto la panca la capra campa sopra la panca carmine merda</string>
+    <string name="dot">.</string>
+    <string name="slash">/</string>
+    <string name="sin">sin</string>
+</resources>
