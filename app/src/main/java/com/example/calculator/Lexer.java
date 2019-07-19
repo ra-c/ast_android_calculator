@@ -5,7 +5,8 @@ import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Lexer {
+public class
+Lexer {
     public static List<Token> tokenize(String s) throws IOException {
         StreamTokenizer tokenizer = new StreamTokenizer(new StringReader(s));
         tokenizer.ordinaryChar('-');
